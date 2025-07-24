@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.swiper-slide {
+    width: max-content;
+
+    img {
+        display: block;
+        width: 400px;
+        border-radius: .8rem;
+
+        @media (width < 1200px){
+            width: 350px;
+        }
+
+        @media (width < 768px){
+            width: 300px;
+        }
+    }
+
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+.swiper {
+    overflow: hidden;
+    margin-top: 8rem;
+
+    @media (width < 768px){
+        margin-top: 4rem;
+    }
+}
+
+.image-shift {
+    margin-top: 3rem;
+}
+

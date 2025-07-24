@@ -1,0 +1,420 @@
+@charset "UTF-8";
+
+:root {
+    --text-color: #909090;
+    --base-color: #fffaf2;
+    --main-color: #6eaa7c;
+    --black: #575757;
+    --border: #adadad;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--black);
+    letter-spacing: 0.8px;
+    font-weight: 350;
+}
+
+main {
+    margin-left: 260px;
+    margin-top: 60px;
+    padding-bottom: 5rem;
+}
+
+p {
+    font-weight: 350;
+    text-align: justify;
+    color: var(--text-color);
+    line-height: 200%;
+    letter-spacing: .96px;
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.this-site {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 120%;
+        height: 140%;
+        background-color: var(--main-color);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50px;
+    }
+}
+
+.main-visual {
+    height: 470px;
+    background-image: url(../img/shichirigahama_high_school.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 5rem;
+}
+
+/* ボタンのスタイル */
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        font-size: 1.4rem;
+        color: var(--text-color);
+        padding: 10px 10px 10px 40px;
+        border: .8px solid var(--main-color);
+        border-radius: 30px;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+        position: relative;
+
+        svg path {
+            fill: var(--text-color);
+            transition: fill .3s ease-in-out;
+        }
+
+        &:hover {
+            color: #fff;
+
+            svg path {
+                fill: #fff;
+            }
+
+            .hover-circle {
+                width: 900px;
+                height: 900px;
+            }
+        }
+
+        span {
+            line-height: 160%;
+            letter-spacing: 1.4px;
+        }
+    }
+
+    .hover-circle {
+        position: absolute;
+        display: block;
+        width: 0px;
+        height: 0px;
+        background-color: var(--main-color);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: width .35s ease-in-out, height .35s ease-in-out;
+        border-radius: 50%;
+    }
+}
+
+.section-title {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    font-weight: 450;
+    letter-spacing: 1.44px;
+
+    span {
+        font-size: 1.5rem;
+        font-weight: 350;
+        color: var(--black);
+        vertical-align: middle;
+        margin-left: 2rem;
+    }
+}
+
+.top-pd {
+    padding-inline: 4rem;
+}
+
+#top-wrapper {
+    .page-title {
+        font-size: 4.6rem;
+    }
+
+    .page-sub-title {
+        font-size: 1.6rem;
+        color: var(--main-color);
+        letter-spacing: 1.6px;
+        padding: 2rem 0 0 2rem;
+        font-weight: 300;
+
+        &::before {
+            content: "-";
+        }
+    }
+
+    .top-image {
+        overflow: hidden;
+        border-radius: 8px;
+        cursor: pointer;
+
+        img {
+            transition: all .3s;
+        }
+
+        &:hover img {
+            transform: scale(1.15);
+        }
+    }
+
+    .top-text {
+        margin-top: 3rem;
+
+        p {
+            letter-spacing: 0.72px;
+            padding-top: 3rem;
+
+            &:nth-child(1) {
+                font-size: 2rem;
+
+                @media (width < 768px) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &:nth-child(2) {
+                font-size: 1.8rem;
+
+                @media (width < 768px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+#anime-introduction, #location-introduction {
+    margin-top: 10rem;
+    padding-inline: 6rem;
+}
+
+.item {
+    padding: 4rem 0;
+    border-bottom: .8px solid var(--border);
+
+    &:last-of-type {
+        border: none;
+    }
+}
+
+.anime-wrapper {
+    margin-top: 4rem;
+}
+
+.anime-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 5rem;
+    margin-top: 2rem;
+
+    h4 {
+        margin-bottom: 2rem;
+    }
+}
+
+.anime-title {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: var(--black);
+}
+
+.sub-heading {
+    font-size: 1.8rem;
+    letter-spacing: 1.8px;
+}
+
+.buny-girl {
+    color: #315482;
+}
+
+.dream-girl {
+    color: #842D3C;
+}
+
+.sister {
+    color: #E09B40;
+}
+
+.school-bag-girl {
+    color: #E72418;
+}
+
+.santa {
+    color: #004EA2;
+}
+
+.anime-info p {
+    font-size: 1.4rem;
+    letter-spacing: 0.56px;
+}
+
+.caption {
+    font-size: 1.3rem;
+    color: var(--border);
+    margin-top: 3rem;
+}
+
+.location-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7rem;
+    row-gap: 8rem;
+    margin-top: 8rem;
+}
+
+.location-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.location-text {
+    margin-top: 2rem;
+
+    p {
+        margin-top: 1rem;
+        line-height: 180%;
+    }
+}
+
+.location-title {
+    font-size: 2rem;
+
+    span {
+        display: inline-block;
+        color: var(--main-color);
+        font-size: 1.4rem;
+        vertical-align: middle;
+        padding-bottom: .5rem;
+        margin-left: 1rem;
+        letter-spacing: .8px;
+    }
+}
+
+.section-head-text {
+    margin-top: 5rem;
+
+    p:last-of-type{
+        margin-top: 1rem;
+    }
+}
+
+.page-transition-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15rem;
+
+    .pt-btn {
+        display: flex;
+        align-items: center;
+
+        svg {
+            position: relative;
+            left: 0;
+            transition: all .3s;
+        }
+
+        span {
+            font-size: 1.6rem;
+            color: var(--black);
+            font-weight: 350;
+            letter-spacing: 0.64px;
+        }
+
+        &.previous:hover svg {
+            left: -5px;
+        }
+
+        &.next:hover svg {
+            left: 5px;
+        }
+    }
+}
+
+@media (width < 1200px) {
+    main {
+        margin: 9.3rem 0 0 0;
+    }
+
+    #top-wrapper {
+        padding-top: 4rem;
+    }
+}
+
+@media (width < 768px) {
+    .top-pd {
+        padding-inline: 2.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .main-visual {
+        height: 300px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+
+        span {
+            font-size: 1.3rem;
+        }
+    }
+
+    #top-wrapper {
+        .page-title {
+            font-size: 3rem;
+        }
+
+        .top-text p {
+            font-size: 1.7rem;
+        }
+    }
+
+    #anime-introduction, #location-introduction {
+        padding-inline: 2.5rem;
+    }
+
+    .anime-title {
+        font-size: 1.8rem;
+    }
+
+    .anime-grid-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .location-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .location-title {
+        font-size: 1.8rem;
+
+        span {
+            font-size: 1.3rem;
+        }
+    }
+}
